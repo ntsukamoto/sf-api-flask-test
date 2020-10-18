@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>倒産速報</title>
+</head>
+<body>
+ <table border="0">
+     <tr>
+         <th>会社名</th>
+         <th>倒産日</th>
+     </tr>
+     {% for jsn in articlelist %}
+     <tr>
+         <td><a href="article?id={{ jsn['Name'] }}">{{jsn['Company_Name__c']}}</a></td>
+         <td>{{jsn['Bankrupt_Date__c']}}</td>
+     </tr>
+     {% endfor %}
+ </table>
+
+
+</body>
+</html>
+
